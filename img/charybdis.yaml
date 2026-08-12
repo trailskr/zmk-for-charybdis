@@ -12,7 +12,7 @@ layers:
   - '8'
   - '9'
   - '0'
-  - \
+  - ''
   - Tab
   - Q
   - W
@@ -24,7 +24,7 @@ layers:
   - I
   - O
   - P
-  - BSPC
+  - '-'
   - Shift
   - A
   - S
@@ -47,130 +47,130 @@ layers:
   - M
   - ','
   - .
-  - {t: /, h: Mouse}
-  - ESC
-  - LEFT WIN
+  - /
+  - '='
+  - Mouse
+  - Lower
   - Space
-  - {t: Enter, h: Lower}
-  - {t: Enter, h: Raise}
+  - Enter
+  - Raise
   - Alt
-  - Alt
-  - CAPSLOCK
   - DEL
+  - BSPC
   Lower:
-  - '~'
-  - '!'
-  - '#'
+  - ESC
+  - BRIGHTNESS DEC
+  - VOLUME DOWN
   - $
+  - VOLUME UP
+  - BRIGHTNESS INC
+  - KP NUMLOCK
+  - PREVIOUS
+  - PLAY
+  - NEXT
+  - AL CALCULATOR
+  - ''
+  - {t: CAPSLOCK, h: toggle}
+  - INSERT
+  - Home
+  - UP ARROW
+  - End
+  - PgUp
+  - KP EQUAL
+  - KP 7
+  - KP 8
+  - Sft+KP 9
+  - KP MINUS
+  - ''
+  - {t: ▽, type: trans}
+  - F2
+  - LEFT ARROW
+  - DOWN ARROW
+  - →
+  - PgDn
+  - KP DIVIDE
+  - KP 4
+  - KP 5
+  - KP 6
+  - KP PLUS
+  - KP COMMA
+  - {t: ▽, type: trans}
+  - F8
+  - PRINTSCREEN
+  - SCROLLLOCK
+  - PAUSE BREAK
+  - MENU
+  - KP DOT
+  - KP 1
+  - KP 2
+  - KP 3
+  - KP EQUAL
+  - ''
+  - {t: ▽, type: trans}
+  - {type: held}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  Raise:
+  - ESC
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - F1
+  - F2
+  - F3
+  - F4
+  - F5
+  - F6
+  - F7
+  - F8
+  - F9
+  - F10
+  - F11
+  - F12
+  - {t: ▽, type: trans}
+  - '!'
+  - '@'
+  - '#'
   - $
   - '%'
   - ^
   - '&'
   - '*'
-  - (
-  - )
   - '|'
-  - '`'
-  - '1'
-  - '2'
-  - '3'
-  - '4'
-  - '['
-  - ']'
-  - F1
-  - F2
-  - F3
-  - F4
-  - BSPC
-  - LSHFT
-  - '5'
-  - '6'
-  - '7'
-  - '8'
-  - ''
   - \
-  - F5
-  - F6
-  - F7
-  - F8
-  - PgUp
-  - Ctrl
-  - '9'
-  - '0'
-  - '-'
-  - '='
+  - ''
+  - {t: ▽, type: trans}
+  - F
+  - '['
+  - '{'
+  - (
   - ''
   - ''
-  - F9
-  - F10
-  - F11
-  - F12
-  - PgDn
-  - LEFT WIN
-  - Space
+  - )
+  - '}'
+  - ']'
+  - ''
+  - ''
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
   - {type: held}
-  - Enter
-  - Alt
-  - ''
-  - ''
-  - ''
-  Raise:
-  - F12
-  - F1
-  - F2
-  - F3
-  - F4
-  - F5
-  - F6
-  - F7
-  - F8
-  - F9
-  - F10
-  - F11
-  - Sft+`
-  - Sft+1
-  - Sft+2
-  - Sft+3
-  - Sft+4
-  - Sft+[
-  - Sft+]
-  - ''
-  - ''
-  - ''
-  - ''
-  - ''
-  - LSHFT
-  - Sft+5
-  - Sft+6
-  - Sft+7
-  - Sft+8
-  - ''
-  - Sft+\
-  - ''
-  - ↑
-  - ''
-  - ''
-  - ''
-  - Ctrl
-  - Sft+9
-  - Sft+0
-  - Sft+-
-  - Sft+=
-  - ''
-  - ''
-  - ←
-  - ↓
-  - →
-  - ''
-  - ''
-  - LEFT WIN
-  - Space
-  - Enter
-  - {type: held}
-  - Alt
-  - ''
-  - ''
-  - ''
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
   Mouse:
   - ''
   - ''
@@ -197,37 +197,37 @@ layers:
   - {t: BT, h: '0'}
   - ''
   - ''
-  - ''
-  - ''
+  - Scroll
+  - '&mkp RCLK'
   - '&mkp MCLK'
+  - '&mkp LCLK'
   - ''
   - ''
-  - ''
-  - ''
+  - '&mkp LCLK'
   - '&mkp MCLK'
-  - ''
-  - ''
+  - '&mkp RCLK'
+  - Scroll
   - ''
   - '&bootloader'
   - {type: held}
-  - '&mkp RCLK'
-  - Scroll
-  - '&mkp LCLK'
+  - ''
+  - ''
   - ''
   - '&studio_unlock'
-  - '&mkp LCLK'
-  - Scroll
-  - '&mkp RCLK'
+  - '&studio_unlock'
   - ''
-  - '&bootloader'
-  - ''
-  - '&mkp LCLK'
-  - '&mkp RCLK'
-  - '&mkp RCLK'
-  - '&mkp LCLK'
   - ''
   - ''
   - ''
+  - '&bootloader'
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
   Scroll:
   - ''
   - ''
@@ -241,47 +241,47 @@ layers:
   - ''
   - ''
   - ''
-  - ''
-  - {t: BT, h: '0'}
-  - {t: BT, h: '1'}
-  - {t: BT, h: '2'}
-  - ''
-  - BT CLR
-  - BT CLR
-  - ''
-  - {t: BT, h: '2'}
-  - {t: BT, h: '1'}
-  - {t: BT, h: '0'}
+  - {t: ▽, type: trans}
   - ''
   - ''
   - ''
   - ''
-  - '&mkp MCLK'
   - ''
   - ''
   - ''
   - ''
-  - '&mkp MCLK'
   - ''
   - ''
   - ''
-  - '&bootloader'
+  - {t: ▽, type: trans}
   - {type: held}
-  - '&mkp RCLK'
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - ''
+  - ''
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - ''
+  - ''
+  - {t: ▽, type: trans}
   - {type: held}
-  - '&mkp LCLK'
-  - ''
-  - ''
-  - '&mkp LCLK'
-  - ''
-  - '&mkp RCLK'
-  - ''
-  - '&bootloader'
-  - ''
-  - '&mkp LCLK'
-  - '&mkp RCLK'
-  - '&mkp RCLK'
-  - '&mkp LCLK'
   - ''
   - ''
   - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
