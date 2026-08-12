@@ -56,12 +56,12 @@ layers:
   - Raise
   - Alt
   - DEL
-  - BSPC
+  - {t: BSPC, h: LEFT WIN}
   Lower:
   - ESC
   - BRIGHTNESS DEC
   - VOLUME DOWN
-  - $
+  - MUTE
   - VOLUME UP
   - BRIGHTNESS INC
   - KP NUMLOCK
