@@ -5,6 +5,7 @@
  */
  
 #include "charybdis.dtsi"
+#include <input/processors/runtime-input-processor.dtsi>
 #include <input/processors/zmk-input-processor-keybind.dtsi>
 
 &default_transform {
