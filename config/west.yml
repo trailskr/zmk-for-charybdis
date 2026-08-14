@@ -1,7 +1,7 @@
 manifest:
   remotes:
     - name: zmkfirmware
-      url-base: https://github.com/zettaface
+      url-base: https://github.com/zmkfirmware
     - name: DoctorWangWang
       url-base: https://github.com/DoctorWangWang
     - name: zettaface
