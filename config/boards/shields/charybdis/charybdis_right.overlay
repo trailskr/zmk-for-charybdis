@@ -67,6 +67,7 @@
     trackball_listener {
         compatible = "zmk,input-listener";
         device = <&trackball>;
+        input-processors = <&zip_keybind_keys>;
     };
 
     zip_keybind_keys: zip_keybind_keys {
@@ -85,11 +86,4 @@
         // max_threshold = <200>
         // max_pending_activations = <10>
     };
-};
-
-&trackball_listener {
-    status = "okay";
-    device = <&trackball>;
-
-    input-processors = <&zip_keybind_keys>;
 };
