@@ -64,5 +64,16 @@
                                &trans  &trans    &trans
             >;
         };
+
+        Snipe {
+            bindings = <
+&none   &none  &none   &none   &none   &none     &none   &none   &none   &none   &none  &none
+&trans  &none  &none   &none   &none   &none     &none   &none   &none   &none   &none  &none
+&trans  &none  &trans  &trans  &trans  &none     &none   &trans  &trans  &trans  &none  &none
+&trans  &none  &none   &none   &none   &none     &none   &none   &none   &none   &none  &none
+                       &trans  &trans  &trans    &trans  &trans
+                               &trans  &trans    &trans
+            >;
+        };
     };
 };
