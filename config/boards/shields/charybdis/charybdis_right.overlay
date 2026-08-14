@@ -71,12 +71,11 @@
 
         arrow_layer: arrow_layer {
             layers = <6>;
-            input-processors = <&zip_xy_transform>,
-                               <&zip_keybind_arrows>;
+            input-processors = <&zip_keybind_arrows>;
             process-next;
         };
 
-        arrow-prevent-move {
+        arrow_prevent_move {
             layers = <6>;
             input-processors = <&zip_xy_scaler 0 1>;
         };
