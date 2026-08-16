@@ -34,11 +34,11 @@
 
         Raise {
             bindings = <
-&kp ESCAPE  &none     &none             &none     &none     &none        &none      &none     &none     &none              &none          &none
-&kp F1      &kp F2    &kp F3            &kp F4    &kp F5    &kp F6       &kp F7     &kp F8    &kp F9    &kp F10            &kp F11        &kp F12
-&trans      &kp EXCL  &kp AT            &kp HASH  &kp DLLR  &kp PRCNT    &kp CARET  &kp AMPS  &kp STAR  &kp PIPE           &kp BACKSLASH  &none
-&trans      &kp F     &kp LEFT_BRACKET  &kp LBRC  &kp LPAR  &none        &none      &kp RPAR  &kp RBRC  &kp RIGHT_BRACKET  &none          &kt CAPSLOCK
-                                        &trans    &trans    &trans       &trans     &trans
+&kp ESCAPE  &none     &none             &none     &none     &none        &none         &none     &none     &none              &none          &none
+&kp F1      &kp F2    &kp F3            &kp F4    &kp F5    &kp F6       &kp F7        &kp F8    &kp F9    &kp F10            &kp F11        &kp F12
+&trans      &kp EXCL  &kp AT            &kp HASH  &kp DLLR  &kp PRCNT    &kp CARET     &kp AMPS  &kp STAR  &kp PIPE           &kp BACKSLASH  &none
+&trans      &kp F     &kp LEFT_BRACKET  &kp LBRC  &kp LPAR  &none        &kp LEFT_WIN  &kp RPAR  &kp RBRC  &kp RIGHT_BRACKET  &none          &kp CAPSLOCK
+                                        &trans    &trans    &trans       &trans        &trans
                                                   &trans    &trans       &trans
             >;
         };
@@ -46,7 +46,7 @@
         Mouse {
             bindings = <
 &none        &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &none      &bt BT_CLR        &bt BT_CLR      &none      &bt BT_SEL 2  &bt BT_SEL 1  &bt BT_SEL 0  &none
-&none        &none         &none         &none         &none      &none             &none           &none      &none         &none         &none         &none
+&none        &none         &mkp RCLK     &mkp MCLK     &mkp LCLK  &none             &none           &mkp LCLK  &mkp MCLK     &mkp RCLK     &none         &none
 &none        &mo 4         &mkp RCLK     &mkp MCLK     &mkp LCLK  &none             &none           &mkp LCLK  &mkp MCLK     &mkp RCLK     &mo 4         &none
 &bootloader  &mo 6         &mkp RCLK     &mkp MCLK     &mkp LCLK  &studio_unlock    &studio_unlock  &mkp LCLK  &mkp MCLK     &mkp RCLK     &mo 6         &bootloader
                                          &trans        &trans     &trans            &trans          &trans
@@ -57,7 +57,7 @@
         Scroll {
             bindings = <
 &none   &none  &none   &none   &none   &none     &none   &none   &none   &none   &none  &none
-&trans  &none  &none   &none   &none   &none     &none   &none   &none   &none   &none  &none
+&trans  &none  &trans  &trans  &trans  &none     &none   &trans  &trans  &trans  &none  &none
 &trans  &none  &trans  &trans  &trans  &none     &none   &trans  &trans  &trans  &none  &none
 &trans  &none  &trans  &trans  &trans  &none     &none   &trans  &trans  &trans  &none  &none
                        &trans  &trans  &trans    &trans  &trans
@@ -68,7 +68,7 @@
         Snipe {
             bindings = <
 &none   &none  &none   &none   &none   &none     &none   &none   &none   &none   &none  &none
-&trans  &none  &none   &none   &none   &none     &none   &none   &none   &none   &none  &none
+&trans  &none  &trans  &trans  &trans  &none     &none   &trans  &trans  &trans  &none  &none
 &trans  &none  &trans  &trans  &trans  &none     &none   &trans  &trans  &trans  &none  &none
 &trans  &none  &trans  &trans  &trans  &none     &none   &trans  &trans  &trans  &none  &none
                        &trans  &trans  &trans    &trans  &trans
@@ -79,7 +79,7 @@
         Arrows {
             bindings = <
 &none   &none  &none   &none   &none   &none     &none   &none   &none   &none   &none  &none
-&trans  &none  &none   &none   &none   &none     &none   &none   &none   &none   &none  &none
+&trans  &none  &trans  &trans  &trans  &none     &none   &trans  &trans  &trans  &none  &none
 &trans  &none  &trans  &trans  &trans  &none     &none   &trans  &trans  &trans  &none  &none
 &trans  &none  &trans  &trans  &trans  &none     &none   &trans  &trans  &trans  &none  &none
                        &trans  &trans  &trans    &trans  &trans
