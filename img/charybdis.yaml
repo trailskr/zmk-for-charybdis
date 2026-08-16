@@ -1,7 +1,62 @@
 layout: {zmk_keyboard: charybdis}
 layers:
-  Base: ['`', '1', '2', '3', '4', '5', '6', '7', '8', '9', '0', Mouse, Tab, Q, W, E, R, T, Y, U, I, O, P, '-', Shift, A, S, D, F, G, H, J, K, L, ;, '''', Ctrl, Z,
-    X, C, V, B, N, M, ',', ., /, '=', Alt, Lower, DEL, BSPC, Raise, Mouse, Space, Enter]
+  Base:
+  - '`'
+  - '1'
+  - '2'
+  - '3'
+  - '4'
+  - '5'
+  - '6'
+  - '7'
+  - '8'
+  - '9'
+  - '0'
+  - Mouse
+  - Tab
+  - Q
+  - W
+  - E
+  - R
+  - T
+  - Y
+  - U
+  - I
+  - O
+  - P
+  - '-'
+  - Shift
+  - A
+  - S
+  - D
+  - F
+  - G
+  - H
+  - J
+  - K
+  - L
+  - ;
+  - ''''
+  - Ctrl
+  - Z
+  - X
+  - C
+  - V
+  - B
+  - N
+  - M
+  - ','
+  - .
+  - /
+  - '='
+  - Alt
+  - Lower
+  - {t: DEL, h: LEFT WIN}
+  - BSPC
+  - Raise
+  - Mouse
+  - Space
+  - Enter
   Lower:
   - ESC
   - BRIGHTNESS DEC
@@ -102,12 +157,12 @@ layers:
   - '{'
   - (
   - ''
-  - ''
+  - LEFT WIN
   - )
   - '}'
   - ']'
   - ''
-  - {t: CAPSLOCK, h: toggle}
+  - CAPSLOCK
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
@@ -131,14 +186,14 @@ layers:
   - {type: held}
   - ''
   - ''
+  - '&mkp RCLK'
+  - '&mkp MCLK'
+  - '&mkp LCLK'
   - ''
   - ''
-  - ''
-  - ''
-  - ''
-  - ''
-  - ''
-  - ''
+  - '&mkp LCLK'
+  - '&mkp MCLK'
+  - '&mkp RCLK'
   - ''
   - ''
   - ''
@@ -188,14 +243,14 @@ layers:
   - {type: held}
   - {t: ▽, type: trans}
   - ''
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
   - ''
   - ''
-  - ''
-  - ''
-  - ''
-  - ''
-  - ''
-  - ''
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
   - ''
   - ''
   - {t: ▽, type: trans}
@@ -245,14 +300,14 @@ layers:
   - {type: held}
   - {t: ▽, type: trans}
   - ''
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
   - ''
   - ''
-  - ''
-  - ''
-  - ''
-  - ''
-  - ''
-  - ''
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
   - ''
   - ''
   - {t: ▽, type: trans}
@@ -302,14 +357,14 @@ layers:
   - {type: held}
   - {t: ▽, type: trans}
   - ''
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
   - ''
   - ''
-  - ''
-  - ''
-  - ''
-  - ''
-  - ''
-  - ''
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
   - ''
   - ''
   - {t: ▽, type: trans}
