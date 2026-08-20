@@ -51,9 +51,9 @@ layers:
   - '='
   - Alt
   - Lower
+  - Raise
   - {t: DEL, h: LEFT WIN}
   - BSPC
-  - Raise
   - Mouse
   - Space
   - Enter
@@ -165,9 +165,9 @@ layers:
   - CAPSLOCK
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
   - {type: held}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
