@@ -79,7 +79,7 @@ layers:
   - KP EQUAL
   - KP 7
   - KP 8
-  - Sft+KP 9
+  - KP 9
   - KP MINUS
   - ''
   - {t: ▽, type: trans}
