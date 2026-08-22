@@ -28,7 +28,7 @@
         Lower {
             bindings = <
 &kp ESCAPE  &kp C_BRIGHTNESS_DEC  &kp C_VOLUME_DOWN  &kp C_MUTE      &kp C_VOLUME_UP  &kp C_BRIGHTNESS_INC    &kp KP_NUMLOCK   &kp C_PREVIOUS   &kp C_PLAY       &kp C_NEXT           &kp C_AL_CALCULATOR  &none
-&trans      &kp INSERT            &kp HOME           &kp UP_ARROW    &kp END          &kp PAGE_UP             &kp KP_EQUAL     &kp KP_NUMBER_7  &kp KP_NUMBER_8  &kp LS(KP_NUMBER_9)  &kp KP_MINUS         &none
+&trans      &kp INSERT            &kp HOME           &kp UP_ARROW    &kp END          &kp PAGE_UP             &kp KP_EQUAL     &kp KP_NUMBER_7  &kp KP_NUMBER_8  &kp KP_NUMBER_9      &kp KP_MINUS         &none
 &trans      &kp F2                &kp LEFT_ARROW     &kp DOWN_ARROW  &kp RIGHT        &kp PAGE_DOWN           &kp KP_DIVIDE    &kp KP_NUMBER_4  &kp KP_NUMBER_5  &kp KP_NUMBER_6      &kp KP_PLUS          &kp KP_COMMA
 &trans      &kp F8                &kp PRINTSCREEN    &kp SCROLLLOCK  &kp PAUSE_BREAK  &kp C_MENU              &kp KP_DOT       &kp KP_NUMBER_1  &kp KP_NUMBER_2  &kp KP_NUMBER_3      &kp KP_EQUAL         &none
                                                      &trans          &trans           &trans                  &trans           &kp KP_NUMBER_0  
