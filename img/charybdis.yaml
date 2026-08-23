@@ -12,7 +12,7 @@ layers:
   - '8'
   - '9'
   - '0'
-  - BSPC
+  - '&mt 3'
   - Tab
   - Q
   - W
@@ -51,9 +51,9 @@ layers:
   - '='
   - Mouse
   - Lower
-  - Stuff
+  - Macros
   - {t: DEL, h: LEFT WIN}
-  - Raise
+  - {t: BSPC, h: Raise}
   - Alt
   - Space
   - Enter
@@ -197,7 +197,7 @@ layers:
   - ''
   - ''
   - {t: ▽, type: trans}
-  - Snipe
+  - Scroll
   - '&mkp RCLK'
   - '&mkp MCLK'
   - '&mkp LCLK'
@@ -209,7 +209,7 @@ layers:
   - Scroll
   - ''
   - {t: ▽, type: trans}
-  - Scroll
+  - Snipe
   - '&mkp RCLK'
   - '&mkp MCLK'
   - '&mkp LCLK'
@@ -219,7 +219,7 @@ layers:
   - '&mkp MCLK'
   - '&mkp RCLK'
   - Arrows
-  - ''
+  - '&bootloader'
   - {type: held}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
@@ -254,16 +254,16 @@ layers:
   - ''
   - ''
   - {t: ▽, type: trans}
-  - ''
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - ''
-  - ''
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
   - {type: held}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - ''
+  - ''
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - ''
   - ''
   - {t: ▽, type: trans}
   - ''
@@ -311,19 +311,19 @@ layers:
   - ''
   - ''
   - {t: ▽, type: trans}
+  - ''
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - ''
+  - ''
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - ''
+  - ''
+  - {t: ▽, type: trans}
   - {type: held}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - ''
-  - ''
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - ''
-  - ''
-  - {t: ▽, type: trans}
-  - ''
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
@@ -399,7 +399,7 @@ layers:
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
-  Stuff:
+  Macros:
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
@@ -433,21 +433,21 @@ layers:
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - ''
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
+  - '&console_log_macro'
   - {t: ▽, type: trans}
   - ''
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - '&const_macro'
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - '&arrow_fn_macro'
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {type: held}
