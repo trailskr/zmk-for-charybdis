@@ -12,7 +12,7 @@ layers:
   - '8'
   - '9'
   - '0'
-  - '&mt 3'
+  - Mouse
   - Tab
   - Q
   - W
@@ -183,7 +183,7 @@ layers:
   - {t: BT, h: '2'}
   - {t: BT, h: '1'}
   - {t: BT, h: '0'}
-  - '&bootloader'
+  - {t: '&bootloader', type: held}
   - {t: ▽, type: trans}
   - Arrows
   - '&mkp RCLK'
@@ -220,7 +220,7 @@ layers:
   - '&mkp RCLK'
   - Arrows
   - '&bootloader'
-  - {type: held}
+  - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
@@ -240,7 +240,7 @@ layers:
   - ''
   - ''
   - ''
-  - ''
+  - {type: held}
   - {t: ▽, type: trans}
   - ''
   - {t: ▽, type: trans}
@@ -277,7 +277,7 @@ layers:
   - {t: ▽, type: trans}
   - ''
   - ''
-  - {type: held}
+  - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
@@ -297,7 +297,7 @@ layers:
   - ''
   - ''
   - ''
-  - ''
+  - {type: held}
   - {t: ▽, type: trans}
   - ''
   - {t: ▽, type: trans}
@@ -334,7 +334,7 @@ layers:
   - {t: ▽, type: trans}
   - ''
   - ''
-  - {type: held}
+  - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
@@ -354,7 +354,7 @@ layers:
   - ''
   - ''
   - ''
-  - ''
+  - {type: held}
   - {t: ▽, type: trans}
   - {type: held}
   - {t: ▽, type: trans}
@@ -391,7 +391,7 @@ layers:
   - {t: ▽, type: trans}
   - ''
   - ''
-  - {type: held}
+  - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
