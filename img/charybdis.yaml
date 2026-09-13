@@ -73,7 +73,7 @@ layers:
   - {t: ▽, type: trans}
   - INSERT
   - Home
-  - UP ARROW
+  - ↑
   - End
   - PgUp
   - KP EQUAL
@@ -83,9 +83,9 @@ layers:
   - KP MINUS
   - ''
   - {t: ▽, type: trans}
-  - F2
-  - LEFT ARROW
-  - DOWN ARROW
+  - ''
+  - ←
+  - ↓
   - →
   - PgDn
   - KP DIVIDE
@@ -95,7 +95,7 @@ layers:
   - KP PLUS
   - KP COMMA
   - {t: ▽, type: trans}
-  - F8
+  - ''
   - PRINTSCREEN
   - SCROLLLOCK
   - PAUSE BREAK
@@ -126,7 +126,7 @@ layers:
   - ''
   - ''
   - ''
-  - '&bootloader'
+  - ''
   - F1
   - F2
   - F3
@@ -191,9 +191,9 @@ layers:
   - '&mkp LCLK'
   - ''
   - ''
-  - '&mkp LCLK'
-  - '&mkp MCLK'
-  - '&mkp RCLK'
+  - ''
+  - ''
+  - ''
   - ''
   - ''
   - {t: ▽, type: trans}
@@ -203,10 +203,10 @@ layers:
   - '&mkp LCLK'
   - ''
   - ''
-  - '&mkp LCLK'
-  - '&mkp MCLK'
-  - '&mkp RCLK'
-  - Scroll
+  - ''
+  - ''
+  - ''
+  - ''
   - ''
   - {t: ▽, type: trans}
   - Snipe
@@ -215,11 +215,11 @@ layers:
   - '&mkp LCLK'
   - '&studio_unlock'
   - '&studio_unlock'
-  - '&mkp LCLK'
-  - '&mkp MCLK'
-  - '&mkp RCLK'
-  - Arrows
-  - '&bootloader'
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
