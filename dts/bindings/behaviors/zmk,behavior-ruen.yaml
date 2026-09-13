@@ -1,0 +1,34 @@
+# Copyright (c) 2026
+# SPDX-License-Identifier: MIT
+
+description: Ergohaven-style RuEn layout-aware key
+
+compatible: "zmk,behavior-ruen"
+
+include: one_param.yaml
+
+properties:
+  toggle-key:
+    type: int
+    default: 0
+    description: "Combo that toggles OS layout in default mode (Win+Space if unset)."
+
+  mac-toggle-key:
+    type: int
+    default: 0
+    description: "Combo that toggles OS layout in Mac mode (Ctrl+Space if unset)."
+
+  en-key:
+    type: int
+    default: 0
+    description: "Combo that selects English in M1M2 mode (Ctrl+Shift+1 if unset)."
+
+  ru-key:
+    type: int
+    default: 0
+    description: "Combo that selects Russian in M1M2 mode (Ctrl+Shift+2 if unset)."
+
+  tapping-term-ms:
+    type: int
+    default: 200
+    description: "Hold threshold for RuEn Mod (toggle on tap, momentary on hold)."

@@ -25,7 +25,49 @@ draw_config:
     text.layer-label { fill: #7ccdfd; font-weight: bold; }
 
 parse_config:
-  
+  zmk_additional_includes:
+    - include
+    - dts
+
+  raw_binding_map:
+    "&ruen_toggle": "RuEn Tg"
+    "&ruen_sync": "RuEn Sync"
+    "&ruen_en": "RuEn En"
+    "&ruen_ru": "RuEn Ru"
+    "&ruen_dot": "."
+    "&ruen_comma": ","
+    "&ruen_semi": ";"
+    "&ruen_colon": ":"
+    "&ruen_dqt": '"'
+    "&ruen_qmark": "?"
+    "&ruen_fslh": "/"
+    "&ruen_lbkt": "["
+    "&ruen_rbkt": "]"
+    "&ruen_lbrc": "{"
+    "&ruen_rbrc": "}"
+    "&ruen_lt": "<"
+    "&ruen_gt": ">"
+    "&ruen_grave": "`"
+    "&ruen_tilde": "~"
+    "&ruen_at": "@"
+    "&ruen_hash": "#"
+    "&ruen_dllr": "$"
+    "&ruen_caret": "^"
+    "&ruen_amps": "&"
+    "&ruen_pipe": "|"
+    "&ruen_sqt": "'"
+    "&ruen_num": "№"
+    "&ruen_word": "RuEn word"
+    "&ruen_prcnt": "%"
+    "&ruen_tg_mac": "RuEn Mac"
+    "&ruen_be": "Б"
+    "&ruen_yu": "Ю"
+    "&ruen_zhe": "Ж"
+    "&ruen_e": "Э"
+    "&ruen_kha": "Х"
+    "&ruen_hrd_sgn": "Ъ"
+    "&ruen_yo": "Ё"
+
   zmk_keycode_map:
     EXCLAMATION: '!'
     EXCL: '!'
@@ -126,3 +168,60 @@ parse_config:
     PG_UP: 'PgUp'
     PAGE_DOWN: 'PgDn'
     PG_DN: 'PgDn'
+
+    RUEN_TOGGLE: 'RuEn Tg'
+    RUEN_SYNC: 'RuEn Sync'
+    RUEN_EN: 'RuEn En'
+    RUEN_RU: 'RuEn Ru'
+    RUEN_M1M2: 'RuEn M1M2'
+    RUEN_DFLT: 'RuEn Dflt'
+    RUEN_DOT: '.'
+    RUEN_COMMA: ','
+    RUEN_SEMI: ';'
+    RUEN_SCLN: ';'
+    RUEN_COLON: ':'
+    RUEN_DQT: '"'
+    RUEN_DQUO: '"'
+    RUEN_QMARK: '?'
+    RUEN_QUES: '?'
+    RUEN_FSLH: '/'
+    RUEN_SLASH: '/'
+    RUEN_LBKT: '['
+    RUEN_LBR: '['
+    RUEN_RBKT: ']'
+    RUEN_RBR: ']'
+    RUEN_LBRC: '{'
+    RUEN_LCBR: '{'
+    RUEN_RBRC: '}'
+    RUEN_RCBR: '}'
+    RUEN_LT: '<'
+    RUEN_GT: '>'
+    RUEN_GRAVE: '`'
+    RUEN_TILDE: '~'
+    RUEN_AT: '@'
+    RUEN_HASH: '#'
+    RUEN_DLLR: '$'
+    RUEN_DLR: '$'
+    RUEN_CARET: '^'
+    RUEN_CIRC: '^'
+    RUEN_AMPS: '&'
+    RUEN_AMPR: '&'
+    RUEN_PIPE: '|'
+    RUEN_SQT: "'"
+    RUEN_QUOTE: "'"
+    RUEN_NUM: '№'
+    RUEN_NUMERO: '№'
+    RUEN_WORD: 'RuEn word'
+    RUEN_MOD: 'RuEn Mod'
+    RUEN_STORE: 'RuEn Store'
+    RUEN_REVERT: 'RuEn Revert'
+    RUEN_PRCNT: '%'
+    RUEN_PERC: '%'
+    RUEN_TG_MAC: 'RuEn Mac'
+    RUEN_BE: 'Б'
+    RUEN_YU: 'Ю'
+    RUEN_ZHE: 'Ж'
+    RUEN_E: 'Э'
+    RUEN_KHA: 'Х'
+    RUEN_HRD_SGN: 'Ъ'
+    RUEN_YO: 'Ё'
