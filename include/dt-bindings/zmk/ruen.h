@@ -80,7 +80,9 @@
 #define RUEN_KHA 39
 #define RUEN_HRD_SGN 40
 #define RUEN_YO 41
+#define RUEN_RUBLE 42
 
 #define RUEN_HA RUEN_KHA
 #define RUEN_HARD RUEN_HRD_SGN
 #define RUEN_IO RUEN_YO
+#define RUEN_RUB RUEN_RUBLE

@@ -54,6 +54,8 @@ parse_config:
     "&ruen_at": "@"
     "&ruen_hash": "#"
     "&ruen_dllr": "$"
+    "&ruen_ruble": "₽"
+    "&em_dash": "—"
     "&ruen_caret": "^"
     "&ruen_amps": "&"
     "&ruen_pipe": "|"

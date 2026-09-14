@@ -310,6 +310,17 @@ static int on_ruen_pressed(struct zmk_behavior_binding *binding,
             hold_start(event.position, russian_letter_key(code), event.timestamp);
         }
         return ZMK_BEHAVIOR_OPAQUE;
+    case RUEN_RUBLE: {
+        uint8_t prev = cur_lang;
+        if (prev != LANG_RU) {
+            set_lang(&event, LANG_RU);
+        }
+        tap_key(RA(N8), event.timestamp);
+        if (prev != LANG_RU) {
+            set_lang(&event, prev);
+        }
+        return ZMK_BEHAVIOR_OPAQUE;
+    }
     default:
         break;
     }
@@ -420,6 +431,7 @@ static const struct behavior_parameter_value_metadata param_values[] = {
     {.display_name = "Х", .value = RUEN_KHA, .type = BEHAVIOR_PARAMETER_VALUE_TYPE_VALUE},
     {.display_name = "Ъ", .value = RUEN_HRD_SGN, .type = BEHAVIOR_PARAMETER_VALUE_TYPE_VALUE},
     {.display_name = "Ё", .value = RUEN_YO, .type = BEHAVIOR_PARAMETER_VALUE_TYPE_VALUE},
+    {.display_name = "RUBLE", .value = RUEN_RUBLE, .type = BEHAVIOR_PARAMETER_VALUE_TYPE_VALUE},
 };
 
 static const struct behavior_parameter_metadata_set param_metadata_set[] = {{
