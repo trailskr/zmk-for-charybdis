@@ -49,7 +49,7 @@ layers:
   - Ю
   - Ъ
   - ''
-  - Scroll
+  - Mouse
   - Lower
   - Macros
   - {t: DEL, h: LEFT WIN}
@@ -334,7 +334,7 @@ layers:
   - ''
   - ''
   - CAPSLOCK
-  - {t: ▽, type: trans}
+  - {type: held}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
@@ -368,7 +368,7 @@ layers:
   - ''
   - ''
   - {t: ▽, type: trans}
-  - ''
+  - {type: held}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
@@ -448,7 +448,7 @@ layers:
   - {t: ▽, type: trans}
   - ''
   - ''
-  - {t: ▽, type: trans}
+  - {type: held}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
@@ -505,7 +505,7 @@ layers:
   - {t: ▽, type: trans}
   - ''
   - ''
-  - {t: ▽, type: trans}
+  - {type: held}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
