@@ -80,161 +80,161 @@
         ruen_dot: ruen_dot {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            display-name = "RuEn .";
+            display-name = "RuEn DOT";
             bindings = <&ruen RUEN_DOT>;
         };
         /omit-if-no-ref/
         ruen_comma: ruen_comma {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            display-name = "RuEn ,";
+            display-name = "RuEn COMMA";
             bindings = <&ruen RUEN_COMMA>;
         };
         /omit-if-no-ref/
         ruen_scln: ruen_semi: ruen_semi {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            display-name = "RuEn ;";
+            display-name = "RuEn SEMI";
             bindings = <&ruen RUEN_SEMI>;
         };
         /omit-if-no-ref/
         ruen_colon: ruen_colon {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            display-name = "RuEn :";
+            display-name = "RuEn COLON";
             bindings = <&ruen RUEN_COLON>;
         };
         /omit-if-no-ref/
         ruen_dquo: ruen_dqt: ruen_dqt {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            display-name = "RuEn \"";
+            display-name = "RuEn DQT";
             bindings = <&ruen RUEN_DQT>;
         };
         /omit-if-no-ref/
         ruen_ques: ruen_qmark: ruen_qmark {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            display-name = "RuEn ?";
+            display-name = "RuEn QMARK";
             bindings = <&ruen RUEN_QMARK>;
         };
         /omit-if-no-ref/
         ruen_slash: ruen_fslh: ruen_fslh {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            display-name = "RuEn /";
+            display-name = "RuEn SLASH";
             bindings = <&ruen RUEN_FSLH>;
         };
         /omit-if-no-ref/
         ruen_lbr: ruen_lbkt: ruen_lbkt {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            display-name = "RuEn [";
+            display-name = "RuEn LBKT";
             bindings = <&ruen RUEN_LBKT>;
         };
         /omit-if-no-ref/
         ruen_rbr: ruen_rbkt: ruen_rbkt {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            display-name = "RuEn ]";
+            display-name = "RuEn RBKT";
             bindings = <&ruen RUEN_RBKT>;
         };
         /omit-if-no-ref/
         ruen_lbrc: ruen_lbrc {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            display-name = "RuEn {";
+            display-name = "RuEn LBRC";
             bindings = <&ruen RUEN_LBRC>;
         };
         /omit-if-no-ref/
         ruen_rbrc: ruen_rbrc {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            display-name = "RuEn }";
+            display-name = "RuEn RBRC";
             bindings = <&ruen RUEN_RBRC>;
         };
         /omit-if-no-ref/
         ruen_lt: ruen_lt {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            display-name = "RuEn <";
+            display-name = "RuEn LT";
             bindings = <&ruen RUEN_LT>;
         };
         /omit-if-no-ref/
         ruen_gt: ruen_gt {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            display-name = "RuEn >";
+            display-name = "RuEn GT";
             bindings = <&ruen RUEN_GT>;
         };
         /omit-if-no-ref/
         ruen_grave: ruen_grave {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            display-name = "RuEn `";
+            display-name = "RuEn GRAVE";
             bindings = <&ruen RUEN_GRAVE>;
         };
         /omit-if-no-ref/
         ruen_tilde: ruen_tilde {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            display-name = "RuEn ~";
+            display-name = "RuEn TILDE";
             bindings = <&ruen RUEN_TILDE>;
         };
         /omit-if-no-ref/
         ruen_at: ruen_at {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            display-name = "RuEn @";
+            display-name = "RuEn AT";
             bindings = <&ruen RUEN_AT>;
         };
         /omit-if-no-ref/
         ruen_hash: ruen_hash {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            display-name = "RuEn #";
+            display-name = "RuEn HASH";
             bindings = <&ruen RUEN_HASH>;
         };
         /omit-if-no-ref/
         ruen_dllr: ruen_dllr {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            display-name = "RuEn $";
+            display-name = "RuEn DLLR";
             bindings = <&ruen RUEN_DLLR>;
         };
         /omit-if-no-ref/
         ruen_caret: ruen_caret {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            display-name = "RuEn ^";
+            display-name = "RuEn CARET";
             bindings = <&ruen RUEN_CARET>;
         };
         /omit-if-no-ref/
         ruen_amps: ruen_amps {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            display-name = "RuEn &";
+            display-name = "RuEn AMPS";
             bindings = <&ruen RUEN_AMPS>;
         };
         /omit-if-no-ref/
         ruen_pipe: ruen_pipe {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            display-name = "RuEn |";
+            display-name = "RuEn PIPE";
             bindings = <&ruen RUEN_PIPE>;
         };
         /omit-if-no-ref/
         ruen_quote: ruen_sqt: ruen_sqt {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            display-name = "RuEn '";
+            display-name = "RuEn SQT";
             bindings = <&ruen RUEN_SQT>;
         };
         /omit-if-no-ref/
         ruen_numero: ruen_num: ruen_num {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            display-name = "RuEn №";
+            display-name = "RuEn NUM";
             bindings = <&ruen RUEN_NUM>;
         };
         /omit-if-no-ref/
@@ -262,7 +262,7 @@
         ruen_prcnt: ruen_prcnt {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            display-name = "RuEn %";
+            display-name = "RuEn PRCNT";
             bindings = <&ruen RUEN_PRCNT>;
         };
         /omit-if-no-ref/
@@ -276,49 +276,49 @@
         ruen_be: ruen_be {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            display-name = "RuEn Б";
+            display-name = "RuEn BE";
             bindings = <&ruen RUEN_BE>;
         };
         /omit-if-no-ref/
         ruen_yu: ruen_yu {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            display-name = "RuEn Ю";
+            display-name = "RuEn YU";
             bindings = <&ruen RUEN_YU>;
         };
         /omit-if-no-ref/
         ruen_zhe: ruen_zhe {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            display-name = "RuEn Ж";
+            display-name = "RuEn ZHE";
             bindings = <&ruen RUEN_ZHE>;
         };
         /omit-if-no-ref/
         ruen_e: ruen_e {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            display-name = "RuEn Э";
+            display-name = "RuEn E";
             bindings = <&ruen RUEN_E>;
         };
         /omit-if-no-ref/
         ruen_kha: ruen_kha {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            display-name = "RuEn Х";
+            display-name = "RuEn KHA";
             bindings = <&ruen RUEN_KHA>;
         };
         /omit-if-no-ref/
         ruen_hrd_sgn: ruen_hrd_sgn {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            display-name = "RuEn Ъ";
+            display-name = "RuEn HARD";
             bindings = <&ruen RUEN_HRD_SGN>;
         };
         /omit-if-no-ref/
         ruen_yo: ruen_yo {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            display-name = "RuEn Ё";
+            display-name = "RuEn YO";
             bindings = <&ruen RUEN_YO>;
         };
     };
