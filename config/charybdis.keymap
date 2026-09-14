@@ -30,6 +30,8 @@
         console_log_macro: console_log_macro {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
+            wait-ms = <0>;
+            tap-ms = <0>;
             bindings = <&kp C &kp O &kp N &kp S &kp O &kp L &kp E &kp DOT &kp L &kp O &kp G &kp LPAR &kp RPAR &kp LEFT_ARROW>;
             label = "CONSOLE_LOG_MACRO";
         };
@@ -37,6 +39,8 @@
         const_macro: const_macro {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
+            wait-ms = <0>;
+            tap-ms = <0>;
             bindings = <&kp C &kp O &kp N &kp S &kp T>;
             label = "CONST_MACRO";
         };
@@ -44,6 +48,8 @@
         arrow_fn_macro: arrow_fn_macro {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
+            wait-ms = <0>;
+            tap-ms = <0>;
             bindings = <&kp LPAR &kp RPAR &kp SPACE &kp EQUAL &kp GT &kp SPACE>;
             label = "ARROW_FN_MACRO";
         };
@@ -51,14 +57,26 @@
         lang_en: lang_en {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&ruen RUEN_EN>;
+            wait-ms = <0>;
+            tap-ms = <0>;
+            bindings
+                = <&macro_press &ruen RUEN_EN>
+                , <&macro_pause_for_release>
+                , <&macro_release &ruen RUEN_EN>
+                ;
             label = "LANG_EN";
         };
 
         lang_ru: lang_ru {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&ruen RUEN_RU>;
+            wait-ms = <0>;
+            tap-ms = <0>;
+            bindings
+                = <&macro_press &ruen RUEN_RU>
+                , <&macro_pause_for_release>
+                , <&macro_release &ruen RUEN_RU>
+                ;
             label = "LANG_RU";
         };
     };

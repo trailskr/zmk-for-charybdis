@@ -14,7 +14,6 @@
 #include <drivers/behavior.h>
 
 #include <zmk/behavior.h>
-#include <zmk/behavior_queue.h>
 #include <zmk/event_manager.h>
 #include <zmk/events/keycode_state_changed.h>
 #include <zmk/hid.h>
@@ -51,18 +50,24 @@ static bool mac_layout;
 static bool should_revert_ru;
 static bool should_revert_macro;
 static bool english_word;
-static int64_t busy_until;
+static bool in_ruen_send;
 static int64_t mod_press_time;
 static bool mod_held;
+static uint8_t num_prev_lang;
+
+#define RUEN_MAX_HELD 8
+static struct {
+    uint32_t position;
+    uint32_t key;
+    bool used;
+} held[RUEN_MAX_HELD];
 
 static const uint32_t en_only_keys[] = {
     LBKT, RBKT, LBRC, RBRC, LT, GT, GRAVE, TILDE, AT, HASH, DLLR, CARET, AMPS, PIPE, SQT,
 };
 
 static void revert_fn(struct k_work *work);
-static void unmask_fn(struct k_work *work);
 static K_WORK_DELAYABLE_DEFINE(revert_work, revert_fn);
-static K_WORK_DELAYABLE_DEFINE(unmask_work, unmask_fn);
 
 static uint32_t default_toggle_key(void) {
     if (mac_layout) {
@@ -75,95 +80,48 @@ static uint32_t default_en_key(void) { return cfg->en_key ? cfg->en_key : LS(LC(
 
 static uint32_t default_ru_key(void) { return cfg->ru_key ? cfg->ru_key : LS(LC(N2)); }
 
-static void mark_busy(uint32_t extra_ms) { busy_until = k_uptime_get() + extra_ms; }
-
-static bool is_busy(void) { return k_uptime_get() < busy_until; }
-
-static void queue_kp(const struct zmk_behavior_binding_event *event, uint32_t key, bool press,
-                     uint32_t wait) {
-    struct zmk_behavior_binding binding = {
-        .behavior_dev = "key_press",
-        .param1 = key,
-    };
-    zmk_behavior_queue_add(event, binding, press, wait);
+static void send_key(uint32_t encoded, bool pressed, int64_t timestamp) {
+    in_ruen_send = true;
+    raise_zmk_keycode_state_changed_from_encoded(encoded, pressed, timestamp);
+    in_ruen_send = false;
 }
 
-static void queue_tap(const struct zmk_behavior_binding_event *event, uint32_t key) {
-    queue_kp(event, key, true, CONFIG_ZMK_RUEN_TAP_MS);
-    queue_kp(event, key, false, CONFIG_ZMK_RUEN_WAIT_MS);
-    mark_busy(CONFIG_ZMK_RUEN_TAP_MS + CONFIG_ZMK_RUEN_WAIT_MS + 20);
+static void tap_key(uint32_t encoded, int64_t timestamp) {
+    send_key(encoded, true, timestamp);
+    send_key(encoded, false, timestamp);
 }
 
-static uint32_t mod_to_key(zmk_mod_flags_t bit) {
-    switch (bit) {
-    case MOD_LCTL:
-        return LCTRL;
-    case MOD_LSFT:
-        return LSHIFT;
-    case MOD_LALT:
-        return LALT;
-    case MOD_LGUI:
-        return LGUI;
-    case MOD_RCTL:
-        return RCTRL;
-    case MOD_RSFT:
-        return RSHIFT;
-    case MOD_RALT:
-        return RALT;
-    case MOD_RGUI:
-        return RGUI;
-    default:
-        return 0;
+static void tap_combo(uint32_t encoded, int64_t timestamp) {
+    zmk_mod_flags_t held_mods = zmk_hid_get_explicit_mods();
+    if (held_mods) {
+        zmk_hid_masked_modifiers_set(held_mods);
+    }
+    tap_key(encoded, timestamp);
+    if (held_mods) {
+        zmk_hid_masked_modifiers_clear();
     }
 }
 
-static void queue_combo(const struct zmk_behavior_binding_event *event, uint32_t encoded) {
-    uint32_t key = STRIP_MODS(encoded);
-    zmk_mod_flags_t mods = SELECT_MODS(encoded);
-    const uint32_t wait = CONFIG_ZMK_RUEN_SWITCH_WAIT_MS;
-    uint32_t busy = CONFIG_ZMK_RUEN_TAP_MS + CONFIG_ZMK_RUEN_WAIT_MS + 20;
-
-    zmk_mod_flags_t held = zmk_hid_get_explicit_mods();
-    if (held) {
-        zmk_hid_masked_modifiers_set(held);
-    }
-
-    static const zmk_mod_flags_t order[] = {MOD_LGUI, MOD_LCTL, MOD_LSFT, MOD_LALT,
-                                            MOD_RGUI, MOD_RCTL, MOD_RSFT, MOD_RALT};
-    for (size_t i = 0; i < ARRAY_SIZE(order); i++) {
-        if (mods & order[i]) {
-            uint32_t mk = mod_to_key(order[i]);
-            if (mk) {
-                queue_kp(event, mk, true, 0);
-                busy += wait;
-            }
+static void hold_start(uint32_t position, uint32_t key, int64_t timestamp) {
+    send_key(key, true, timestamp);
+    for (int i = 0; i < RUEN_MAX_HELD; i++) {
+        if (!held[i].used) {
+            held[i].used = true;
+            held[i].position = position;
+            held[i].key = key;
+            return;
         }
     }
-
-    queue_kp(event, key, true, CONFIG_ZMK_RUEN_TAP_MS);
-    queue_kp(event, key, false, wait);
-    busy += wait;
-
-    for (int i = ARRAY_SIZE(order) - 1; i >= 0; i--) {
-        if (mods & order[i]) {
-            uint32_t mk = mod_to_key(order[i]);
-            if (mk) {
-                queue_kp(event, mk, false, wait);
-                busy += wait;
-            }
-        }
-    }
-
-    mark_busy(busy);
-
-    if (held) {
-        k_work_reschedule(&unmask_work, K_MSEC(busy + 10));
-    }
 }
 
-static void unmask_fn(struct k_work *work) {
-    ARG_UNUSED(work);
-    zmk_hid_masked_modifiers_clear();
+static void hold_end(uint32_t position, int64_t timestamp) {
+    for (int i = 0; i < RUEN_MAX_HELD; i++) {
+        if (held[i].used && held[i].position == position) {
+            send_key(held[i].key, false, timestamp);
+            held[i].used = false;
+            return;
+        }
+    }
 }
 
 static void set_lang(const struct zmk_behavior_binding_event *event, uint8_t lang) {
@@ -174,10 +132,10 @@ static void set_lang(const struct zmk_behavior_binding_event *event, uint8_t lan
         if (cur_lang == lang) {
             return;
         }
-        queue_combo(event, default_toggle_key());
+        tap_combo(default_toggle_key(), event->timestamp);
         break;
     case MODE_M1M2:
-        queue_combo(event, lang == LANG_EN ? default_en_key() : default_ru_key());
+        tap_combo(lang == LANG_EN ? default_en_key() : default_ru_key(), event->timestamp);
         break;
     default:
         break;
@@ -256,14 +214,12 @@ static uint32_t russian_letter_key(uint32_t code) {
     }
 }
 
-static void tap_with_optional_lang(const struct zmk_behavior_binding_event *event, uint8_t lang,
-                                   uint32_t key, bool revert) {
-    uint8_t prev = cur_lang;
-    set_lang(event, lang);
-    queue_tap(event, key);
-    if (revert && prev != lang) {
-        arm_revert(event);
+static void press_with_optional_lang(const struct zmk_behavior_binding_event *event, uint8_t lang,
+                                     uint32_t key) {
+    if (cur_lang != lang) {
+        set_lang(event, lang);
     }
+    hold_start(event->position, key, event->timestamp);
 }
 
 static int on_ruen_pressed(struct zmk_behavior_binding *binding,
@@ -308,22 +264,21 @@ static int on_ruen_pressed(struct zmk_behavior_binding *binding,
     case RUEN_DQT:
     case RUEN_QMARK:
     case RUEN_FSLH:
-        queue_tap(&event, bilingual_key(code));
+        hold_start(event.position, bilingual_key(code), event.timestamp);
         return ZMK_BEHAVIOR_OPAQUE;
     case RUEN_PRCNT:
-        queue_tap(&event, (cur_lang == LANG_RU && mac_layout) ? LS(N4) : LS(N5));
+        hold_start(event.position, (cur_lang == LANG_RU && mac_layout) ? LS(N4) : LS(N5),
+                   event.timestamp);
         return ZMK_BEHAVIOR_OPAQUE;
     case RUEN_TG_MAC:
         mac_layout = !mac_layout;
         LOG_DBG("ruen mac_layout=%d", mac_layout);
         return ZMK_BEHAVIOR_OPAQUE;
-    case RUEN_NUM: {
-        uint8_t prev = cur_lang;
+    case RUEN_NUM:
+        num_prev_lang = cur_lang;
         set_lang(&event, LANG_RU);
-        queue_tap(&event, LS(N3));
-        set_lang(&event, prev);
+        hold_start(event.position, LS(N3), event.timestamp);
         return ZMK_BEHAVIOR_OPAQUE;
-    }
     case RUEN_WORD:
         if (cur_lang == LANG_RU && !english_word) {
             english_word = true;
@@ -331,8 +286,8 @@ static int on_ruen_pressed(struct zmk_behavior_binding *binding,
             set_lang(&event, LANG_EN);
             if (shift) {
                 struct zmk_behavior_binding cw = {.behavior_dev = "caps_word"};
-                zmk_behavior_queue_add(&event, cw, true, 0);
-                zmk_behavior_queue_add(&event, cw, false, 0);
+                zmk_behavior_invoke_binding(&cw, event, true);
+                zmk_behavior_invoke_binding(&cw, event, false);
             }
         }
         return ZMK_BEHAVIOR_OPAQUE;
@@ -352,7 +307,7 @@ static int on_ruen_pressed(struct zmk_behavior_binding *binding,
     case RUEN_HRD_SGN:
     case RUEN_YO:
         if (cur_lang == LANG_RU) {
-            queue_tap(&event, russian_letter_key(code));
+            hold_start(event.position, russian_letter_key(code), event.timestamp);
         }
         return ZMK_BEHAVIOR_OPAQUE;
     default:
@@ -361,7 +316,7 @@ static int on_ruen_pressed(struct zmk_behavior_binding *binding,
 
     if (code >= RUEN_EN_FIRST && code <= RUEN_EN_LAST) {
         uint8_t prev = cur_lang;
-        tap_with_optional_lang(&event, LANG_EN, en_only_keys[code - RUEN_EN_FIRST], false);
+        press_with_optional_lang(&event, LANG_EN, en_only_keys[code - RUEN_EN_FIRST]);
         if (prev == LANG_RU) {
             arm_revert(&event);
         }
@@ -374,6 +329,7 @@ static int on_ruen_pressed(struct zmk_behavior_binding *binding,
 
 static int on_ruen_released(struct zmk_behavior_binding *binding,
                             struct zmk_behavior_binding_event event) {
+    hold_end(event.position, event.timestamp);
     if (binding->param1 == RUEN_MOD && mod_held) {
         mod_held = false;
         int64_t held_ms = event.timestamp - mod_press_time;
@@ -381,12 +337,15 @@ static int on_ruen_released(struct zmk_behavior_binding *binding,
             lang_toggle(&event);
         }
     }
+    if (binding->param1 == RUEN_NUM && cur_lang != num_prev_lang) {
+        set_lang(&event, num_prev_lang);
+    }
     return ZMK_BEHAVIOR_OPAQUE;
 }
 
 static int ruen_keycode_listener(const zmk_event_t *eh) {
     const struct zmk_keycode_state_changed *ev = as_zmk_keycode_state_changed(eh);
-    if (ev == NULL || !ev->state || is_busy()) {
+    if (ev == NULL || !ev->state || in_ruen_send) {
         return ZMK_EV_EVENT_BUBBLE;
     }
 

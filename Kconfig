@@ -8,15 +8,15 @@ if ZMK_BEHAVIOR_RUEN
 
 config ZMK_RUEN_TAP_MS
 	int "RuEn key tap duration (ms)"
-	default 30
+	default 0
 
 config ZMK_RUEN_WAIT_MS
 	int "RuEn wait after a tap (ms)"
-	default 30
+	default 0
 
 config ZMK_RUEN_SWITCH_WAIT_MS
 	int "Wait after sending a layout-switch combo (ms)"
-	default 50
+	default 0
 
 config ZMK_RUEN_REVERT_MS
 	int "Delay before reverting to Russian after an English-only symbol (ms)"
