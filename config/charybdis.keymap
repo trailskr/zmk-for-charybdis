@@ -87,7 +87,7 @@
 &trans                &kp INSERT            &kp HOME              &kp UP                &kp END               &kp PAGE_UP           &kp KP_EQUAL          &kp KP_NUMBER_7       &kp KP_NUMBER_8       &kp KP_NUMBER_9       &kp KP_MINUS          &none                 //
 &trans                &none                 &kp LEFT              &kp DOWN              &kp RIGHT             &kp PAGE_DOWN         &kp KP_DIVIDE         &kp KP_NUMBER_4       &kp KP_NUMBER_5       &kp KP_NUMBER_6       &kp KP_PLUS           &kp KP_COMMA          //
 &trans                &none                 &kp PRINTSCREEN       &kp SCROLLLOCK        &kp PAUSE_BREAK       &kp C_MENU            &kp KP_DOT            &kp KP_NUMBER_1       &kp KP_NUMBER_2       &kp KP_NUMBER_3       &kp KP_EQUAL          &none                 //
-                                                                  &mo 4                 &mo 3                 &trans                &trans                &kp KP_NUMBER_0       //
+                                                                  &trans                &trans                &trans                &trans                &kp KP_NUMBER_0       //
                                                                                         &trans                &trans                &trans                //
             >;         
         };
@@ -101,7 +101,7 @@
 &kp F1                &kp F2                &kp F3                &kp F4                &kp F5                &kp F6                &kp F7                &kp F8                &kp F9                &kp F10               &kp F11               &kp F12               //
 &trans                &ruen_dot             &ruen_at              &ruen_hash            &ruen_dllr            &ruen_prcnt           &ruen_caret           &ruen_amps            &kp STAR              &ruen_pipe            &ruen_comma           &ruen_sqt             //
 &trans                &kp F                 &ruen_tilde           &ruen_lt              &kp LPAR              &none                 &none                 &kp RPAR              &ruen_gt              &none                 &none                 &kp MINUS             //
-                                                                  &trans                &trans                &trans                &trans                &trans                //
+                                                                  &mo 4                 &mo 3                 &trans                &trans                &trans                //
                                                                                         &trans                &trans                &trans                //
             >;
         };
