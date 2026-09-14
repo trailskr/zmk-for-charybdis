@@ -38,6 +38,7 @@ struct behavior_ruen_config {
     uint32_t en_key;
     uint32_t ru_key;
     int tapping_term_ms;
+    uint8_t default_mode;
 };
 
 static const struct behavior_ruen_config *cfg;
@@ -485,6 +486,7 @@ static const struct behavior_driver_api behavior_ruen_driver_api = {
 
 static int behavior_ruen_init(const struct device *dev) {
     cfg = dev->config;
+    tg_mode = cfg->default_mode == MODE_M1M2 ? MODE_M1M2 : MODE_DEFAULT;
     return 0;
 }
 
@@ -494,6 +496,7 @@ static const struct behavior_ruen_config behavior_ruen_config_0 = {
     .en_key = DT_INST_PROP_OR(0, en_key, 0),
     .ru_key = DT_INST_PROP_OR(0, ru_key, 0),
     .tapping_term_ms = DT_INST_PROP_OR(0, tapping_term_ms, 200),
+    .default_mode = DT_INST_PROP_OR(0, default_mode, 0),
 };
 
 BEHAVIOR_DT_INST_DEFINE(0, behavior_ruen_init, NULL, NULL, &behavior_ruen_config_0, POST_KERNEL,

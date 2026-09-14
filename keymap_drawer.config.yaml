@@ -30,6 +30,8 @@ parse_config:
     - dts
 
   raw_binding_map:
+    "&lang_en": "EN"
+    "&lang_ru": "RU"
     "&ruen_toggle": "RuEn Tg"
     "&ruen_sync": "RuEn Sync"
     "&ruen_en": "RuEn En"

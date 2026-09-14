@@ -32,3 +32,8 @@ properties:
     type: int
     default: 200
     description: "Hold threshold for RuEn Mod (toggle on tap, momentary on hold)."
+
+  default-mode:
+    type: int
+    default: 0
+    description: "0 = toggle combo (Win+Space), 1 = dedicated EN/RU combos (M1M2)."
