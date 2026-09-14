@@ -106,8 +106,8 @@ layers:
   - KP 3
   - KP EQUAL
   - ''
-  - Raise3
-  - {t: Raise2, type: held}
+  - {t: ▽, type: trans}
+  - {type: held}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - KP 0
@@ -163,8 +163,8 @@ layers:
   - ''
   - ''
   - '-'
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
+  - Raise3
+  - Raise2
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {type: held}
@@ -224,7 +224,7 @@ layers:
   - {type: held}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
+  - {type: held}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
@@ -278,10 +278,10 @@ layers:
   - ''
   - ''
   - {type: held}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
   - {type: held}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
