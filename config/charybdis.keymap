@@ -76,6 +76,15 @@
         };
     };
 
+    conditional_layers {
+        compatible = "zmk,conditional-layers";
+
+        LowerRaise {
+            if-layers = <2 1>;
+            then-layer = <3>;
+        };
+    };
+
     keymap {
         compatible = "zmk,keymap";
 
@@ -87,7 +96,7 @@
 &kp TAB               &kp Q                 &kp W                 &kp E                 &kp R                 &kp T                 &kp Y                 &kp U                 &kp I                 &kp O                 &kp P                 &ruen_kha             //
 &kp LEFT_SHIFT        &kp A                 &kp S                 &kp D                 &kp F                 &kp G                 &kp H                 &kp J                 &kp K                 &kp L                 &ruen_zhe             &ruen_e               //
 &kp LCTRL             &kp Z                 &kp X                 &kp C                 &kp V                 &kp B                 &kp N                 &kp M                 &ruen_be              &ruen_yu              &ruen_hrd_sgn         &ruen_yo              //
-                                                                  &mo 5                 &mo 1                 &mo 9                 &mt LEFT_WIN DELETE   &lt 2 BACKSPACE       //
+                                                                  &mo 4                 &mo 1                 &mo 8                 &mt LEFT_WIN DELETE   &lt 2 BACKSPACE       //
                                                                                         &kp LEFT_ALT          &kp SPACE             &kp ENTER             //
             >;
         };
@@ -113,52 +122,39 @@
 &kp ESCAPE            &none                 &none                 &none                 &none                 &none                 &none                 &none                 &none                 &none                 &none                 &none                 //
 &kp F1                &kp F2                &kp F3                &kp F4                &kp F5                &kp F6                &kp F7                &kp F8                &kp F9                &kp F10               &kp F11               &kp F12               //
 &trans                &ruen_dot             &ruen_at              &ruen_hash            &ruen_dllr            &ruen_prcnt           &ruen_caret           &ruen_amps            &kp STAR              &ruen_pipe            &ruen_comma           &ruen_sqt             //
-&trans                &ruen_lt              &ruen_lbkt            &ruen_lbrc            &kp LPAR              &ruen_tilde           &kp PLUS              &kp RPAR              &ruen_rbrc            &ruen_rbkt            &ruen_gt              &kp MINUS             //
+&trans                &ruen_lt              &ruen_lbkt            &ruen_lbrc            &kp LPAR              &kp MINUS             &kp PLUS              &kp RPAR              &ruen_rbrc            &ruen_rbkt            &ruen_gt              &ruen_tilde           //
                                                                   &trans                &trans                &trans                &trans                &trans                //
                                                                                         &trans                &trans                &trans                //
             >;
         };
 
         // 3
-        Raise2 {
+        LowerRaise {
 //                    //                    //                    //                    //                    // ________||________ //                    //                    //                    //                    //                    //                    //
             bindings = <
 &none                 &none                 &none                 &none                 &none                 &none                 &none                 &none                 &none                 &none                 &none                 &none                 //
 &trans                &none                 &none                 &none                 &none                 &none                 &none                 &none                 &none                 &none                 &none                 &none                 //
-&trans                &kp EXCL              &none                 &ruen_num             &ruen_ruble           &none                 &none                 &none                 &none                 &ruen_fslh            &ruen_semi            &ruen_dqt             //
-&trans                &none                 &none                 &none                 &none                 &none                 &kp EQUAL             &none                 &none                 &none                 &none                 &em_dash              //
+&trans                &kp EXCL              &ruen_qmark           &ruen_num             &ruen_ruble           &kp BACKSLASH         &none                 &ruen_grave           &none                 &ruen_fslh            &ruen_semi            &ruen_dqt             //
+&trans                &none                 &none                 &none                 &none                 &kp UNDER             &kp EQUAL             &ruen_colon           &none                 &none                 &none                 &em_dash              //
                                                                   &trans                &trans                &trans                &trans                &trans                //
                                                                                         &trans                &trans                &trans                //
             >;
         };
 
         // 4
-        Raise3 {
-//                    //                    //                    //                    //                    // ________||________ //                    //                    //                    //                    //                    //                    //        
+        Mouse {
+//                    //                    //                    //                    //                    // ________||________ //                    //                    //                    //                    //                    //                    //
             bindings = <
-&none                 &none                 &none                 &none                 &none                 &none                 &none                 &none                 &none                 &none                 &none                 &none                 //
-&trans                &none                 &none                 &none                 &none                 &none                 &none                 &none                 &none                 &none                 &none                 &none                 //
-&trans                &ruen_qmark           &none                 &none                 &none                 &none                 &none                 &none                 &none                 &kp BACKSLASH         &ruen_colon           &ruen_grave           //
-&trans                &none                 &none                 &none                 &none                 &none                 &none                 &none                 &none                 &none                 &none                 &kp UNDER             //
+&bootloader           &bt BT_SEL 0          &bt BT_SEL 1          &bt BT_SEL 2          &none                 &bt BT_CLR            &bt BT_CLR            &none                 &bt BT_SEL 2          &bt BT_SEL 1          &bt BT_SEL 0          &bootloader           //
+&trans                &mo 7                 &mkp RCLK             &mkp MCLK             &mkp LCLK             &none                 &none                 &none                 &none                 &none                 &none                 &none                 //
+&trans                &mo 5                 &mkp RCLK             &mkp MCLK             &mkp LCLK             &none                 &none                 &none                 &none                 &none                 &none                 &none                 //
+&trans                &mo 6                 &mkp RCLK             &mkp MCLK             &mkp LCLK             &studio_unlock        &studio_unlock        &none                 &none                 &none                 &none                 &kp CAPSLOCK          //
                                                                   &trans                &trans                &trans                &trans                &trans                //
                                                                                         &trans                &trans                &trans                //
             >;
         };
 
         // 5
-        Mouse {
-//                    //                    //                    //                    //                    // ________||________ //                    //                    //                    //                    //                    //                    //
-            bindings = <
-&bootloader           &bt BT_SEL 0          &bt BT_SEL 1          &bt BT_SEL 2          &none                 &bt BT_CLR            &bt BT_CLR            &none                 &bt BT_SEL 2          &bt BT_SEL 1          &bt BT_SEL 0          &bootloader           //
-&trans                &mo 8                 &mkp RCLK             &mkp MCLK             &mkp LCLK             &none                 &none                 &none                 &none                 &none                 &none                 &none                 //
-&trans                &mo 6                 &mkp RCLK             &mkp MCLK             &mkp LCLK             &none                 &none                 &none                 &none                 &none                 &none                 &none                 //
-&trans                &mo 7                 &mkp RCLK             &mkp MCLK             &mkp LCLK             &studio_unlock        &studio_unlock        &none                 &none                 &none                 &none                 &kp CAPSLOCK          //
-                                                                  &trans                &trans                &trans                &trans                &trans                //
-                                                                                        &trans                &trans                &trans                //
-            >;
-        };
-
-        // 6
         Scroll {
 //                    //                    //                    //                    //                    // ________||________ //                    //                    //                    //                    //                    //                    //
             bindings = <
@@ -171,7 +167,7 @@
             >;
         };
 
-        // 7
+        // 6
         Snipe {
 //                    //                    //                    //                    //                    // ________||________ //                    //                    //                    //                    //                    //                    //
             bindings = <
@@ -184,7 +180,7 @@
             >;
         };
 
-        // 8
+        // 7
         Arrows {
 //                    //                    //                    //                    //                    // ________||________ //                    //                    //                    //                    //                    //                    //
             bindings = <
@@ -197,7 +193,7 @@
             >;
         };
 
-        // 9
+        // 8
         Macros {
 //                    //                    //                    //                    //                    // ________||________ //                    //                    //                    //                    //                    //                    //
             bindings = <
@@ -208,20 +204,6 @@
                                                                   &trans                &trans                &trans                &trans                &trans                //
                                                                                         &trans                &trans                &trans                //
             >;
-        };
-    };
-  
-    conditional_layers {
-        compatible = "zmk,conditional-layers";
-
-        Raise2 {
-            if-layers = <2 1>;
-            then-layer = <3>;
-        };
-
-        Raise3 {
-            if-layers = <2 5>;
-            then-layer = <4>;
         };
     };
 };
