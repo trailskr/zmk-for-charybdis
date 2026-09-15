@@ -83,10 +83,10 @@
         Base {
 //                    //                    //                    //                    //                    // ________||________ //                    //                    //                    //                    //                    //                    //
             bindings = < 
-&ruen_yo              &kp N1                &kp N2                &kp N3                &kp N4                &kp N5                &kp N6                &kp N7                &kp N8                &kp N9                &kp N0                &none                 //
+&none                 &kp N1                &kp N2                &kp N3                &kp N4                &kp N5                &kp N6                &kp N7                &kp N8                &kp N9                &kp N0                &none                 //
 &kp TAB               &kp Q                 &kp W                 &kp E                 &kp R                 &kp T                 &kp Y                 &kp U                 &kp I                 &kp O                 &kp P                 &ruen_kha             //
 &kp LEFT_SHIFT        &kp A                 &kp S                 &kp D                 &kp F                 &kp G                 &kp H                 &kp J                 &kp K                 &kp L                 &ruen_zhe             &ruen_e               //
-&kp LCTRL             &kp Z                 &kp X                 &kp C                 &kp V                 &kp B                 &kp N                 &kp M                 &ruen_be              &ruen_yu              &ruen_hrd_sgn         &none                 //
+&kp LCTRL             &kp Z                 &kp X                 &kp C                 &kp V                 &kp B                 &kp N                 &kp M                 &ruen_be              &ruen_yu              &ruen_hrd_sgn         &ruen_yo              //
                                                                   &mo 5                 &mo 1                 &mo 9                 &mt LEFT_WIN DELETE   &lt 2 BACKSPACE       //
                                                                                         &kp LEFT_ALT          &kp SPACE             &kp ENTER             //
             >;
@@ -97,9 +97,9 @@
 //                    //                    //                    //                    //                    // ________||________ //                    //                    //                    //                    //                    //                    //
             bindings = <
 &kp ESCAPE            &kp C_BRIGHTNESS_DEC  &kp C_VOLUME_DOWN     &kp C_MUTE            &kp C_VOLUME_UP       &kp C_BRIGHTNESS_INC  &kp KP_NUMLOCK        &kp C_PREVIOUS        &kp C_PLAY            &kp C_NEXT            &kp C_AL_CALCULATOR   &none                 //
-&trans                &kp INSERT            &kp HOME              &kp UP                &kp END               &kp PAGE_UP           &kp KP_EQUAL          &kp KP_NUMBER_7       &kp KP_NUMBER_8       &kp KP_NUMBER_9       &kp KP_MINUS          &none                 //
+&trans                &kp INSERT            &kp HOME              &kp UP                &kp END               &kp PAGE_UP           &kp KP_MULTIPLY       &kp KP_NUMBER_7       &kp KP_NUMBER_8       &kp KP_NUMBER_9       &kp KP_MINUS          &none                 //
 &trans                &none                 &kp LEFT              &kp DOWN              &kp RIGHT             &kp PAGE_DOWN         &kp KP_DIVIDE         &kp KP_NUMBER_4       &kp KP_NUMBER_5       &kp KP_NUMBER_6       &kp KP_PLUS           &kp KP_COMMA          //
-&trans                &none                 &kp PRINTSCREEN       &kp SCROLLLOCK        &kp PAUSE_BREAK       &kp C_MENU            &kp KP_DOT            &kp KP_NUMBER_1       &kp KP_NUMBER_2       &kp KP_NUMBER_3       &kp KP_EQUAL          &kp KP_NUMBER_0       //
+&trans                &none                 &kp PRINTSCREEN       &kp SCROLLLOCK        &kp PAUSE_BREAK       &kp C_MENU            &kp KP_NUMBER_0       &kp KP_NUMBER_1       &kp KP_NUMBER_2       &kp KP_NUMBER_3       &kp KP_EQUAL          &kp KP_DOT            //
                                                                   &trans                &trans                &trans                &trans                &mo 3                 //
                                                                                         &trans                &trans                &trans                //
             >;         
@@ -113,7 +113,7 @@
 &kp ESCAPE            &none                 &none                 &none                 &none                 &none                 &none                 &none                 &none                 &none                 &none                 &none                 //
 &kp F1                &kp F2                &kp F3                &kp F4                &kp F5                &kp F6                &kp F7                &kp F8                &kp F9                &kp F10               &kp F11               &kp F12               //
 &trans                &ruen_dot             &ruen_at              &ruen_hash            &ruen_dllr            &ruen_prcnt           &ruen_caret           &ruen_amps            &kp STAR              &ruen_pipe            &ruen_comma           &ruen_sqt             //
-&trans                &kp F                 &ruen_tilde           &ruen_lt              &kp LPAR              &none                 &none                 &kp RPAR              &ruen_gt              &none                 &none                 &kp MINUS             //
+&trans                &ruen_lt              &ruen_lbkt            &ruen_lbrc            &kp LPAR              &ruen_tilde           &kp PLUS              &kp RPAR              &ruen_rbrc            &ruen_rbkt            &ruen_gt              &kp MINUS             //
                                                                   &mo 4                 &mo 3                 &trans                &trans                &trans                //
                                                                                         &trans                &trans                &trans                //
             >;
@@ -126,7 +126,7 @@
 &none                 &none                 &none                 &none                 &none                 &none                 &none                 &none                 &none                 &none                 &none                 &none                 //
 &trans                &none                 &none                 &none                 &none                 &none                 &none                 &none                 &none                 &none                 &none                 &none                 //
 &trans                &kp EXCL              &none                 &ruen_num             &ruen_ruble           &none                 &none                 &none                 &none                 &ruen_fslh            &ruen_semi            &ruen_dqt             //
-&trans                &none                 &em_dash              &none                 &ruen_lbrc            &none                 &none                 &ruen_rbrc            &none                 &none                 &none                 &kp EQUAL             //
+&trans                &none                 &none                 &none                 &none                 &none                 &kp EQUAL             &none                 &none                 &none                 &none                 &em_dash              //
                                                                   &trans                &trans                &trans                &trans                &trans                //
                                                                                         &trans                &trans                &trans                //
             >;
@@ -139,7 +139,7 @@
 &none                 &none                 &none                 &none                 &none                 &none                 &none                 &none                 &none                 &none                 &none                 &none                 //
 &trans                &none                 &none                 &none                 &none                 &none                 &none                 &none                 &none                 &none                 &none                 &none                 //
 &trans                &ruen_qmark           &none                 &none                 &none                 &none                 &none                 &none                 &none                 &kp BACKSLASH         &ruen_colon           &ruen_grave           //
-&trans                &none                 &none                 &none                 &ruen_lbkt            &none                 &none                 &ruen_rbkt            &none                 &none                 &none                 &kp UNDER             //
+&trans                &none                 &none                 &none                 &none                 &none                 &none                 &none                 &none                 &none                 &none                 &kp UNDER             //
                                                                   &trans                &trans                &trans                &trans                &trans                //
                                                                                         &trans                &trans                &trans                //
             >;
