@@ -120,7 +120,7 @@
 //                    //                    //                    //                    //                    // ________||________ //                    //                    //                    //                    //                    //                    //
             bindings = <
 &kp ESCAPE            &none                 &none                 &none                 &none                 &none                 &none                 &none                 &none                 &none                 &none                 &none                 //
-&trans                &kp EXCL              &none                 &ruen_num             &ruen_ruble           &none                 &ruen_colon           &ruen_qmark           &ruen_tilde           &none                 &ruen_semi            &ruen_dqt             //
+&trans                &kp EXCL              &ruen_qmark           &ruen_num             &ruen_ruble           &none                 &none                 &em_dash              &ruen_tilde           &ruen_colon           &ruen_semi            &ruen_dqt             //
 &trans                &ruen_dot             &ruen_at              &ruen_hash            &ruen_dllr            &ruen_prcnt           &ruen_caret           &ruen_amps            &kp STAR              &ruen_pipe            &ruen_comma           &ruen_sqt             //
 &trans                &ruen_lt              &ruen_lbkt            &ruen_lbrc            &kp LPAR              &ruen_fslh            &kp BACKSLASH         &kp RPAR              &ruen_rbrc            &ruen_rbkt            &ruen_gt              &ruen_grave           //
                                                                   &trans                &trans                &trans                &trans                &trans                //
@@ -133,9 +133,9 @@
 //                    //                    //                    //                    //                    // ________||________ //                    //                    //                    //                    //                    //                    //
             bindings = <
 &none                 &none                 &none                 &none                 &none                 &none                 &none                 &none                 &none                 &none                 &none                 &none                 //
-&kp F1                &kp F2                &kp F3                &kp F4                &kp F5                &kp F6                &kp F7                &kp F8                &kp F9                &kp F10               &kp F11               &kp F12               //
-&trans                &none                 &none                 &none                 &none                 &none                 &none                 &none                 &none                 &none                 &none                 &none                 //
-&trans                &none                 &none                 &none                 &none                 &none                 &none                 &none                 &none                 &none                 &none                 &em_dash              //
+&none                 &kp F9                &kp F10               &kp F11               &kp F12               &none                 &none                 &none                 &none                 &none                 &none                 &none                 //
+&trans                &kp F5                &kp F6                &kp F7                &kp F8                &none                 &none                 &none                 &none                 &none                 &none                 &none                 //
+&trans                &kp F1                &kp F2                &kp F3                &kp F4                &none                 &none                 &none                 &none                 &none                 &none                 &none                 //
                                                                   &trans                &trans                &trans                &trans                &trans                //
                                                                                         &trans                &trans                &trans                //
             >;
