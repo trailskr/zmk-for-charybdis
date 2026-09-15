@@ -156,13 +156,13 @@ layers:
   - '['
   - '{'
   - (
-  - '~'
+  - '-'
   - +
   - )
   - '}'
   - ']'
   - '>'
-  - '-'
+  - '~'
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
@@ -171,7 +171,7 @@ layers:
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
-  Raise2:
+  LowerRaise:
   - ''
   - ''
   - ''
@@ -198,12 +198,12 @@ layers:
   - ''
   - {t: ▽, type: trans}
   - '!'
-  - ''
+  - '?'
   - №
   - ₽
+  - \
   - ''
-  - ''
-  - ''
+  - '`'
   - ''
   - /
   - ;
@@ -213,9 +213,9 @@ layers:
   - ''
   - ''
   - ''
-  - ''
+  - _
   - '='
-  - ''
+  - ':'
   - ''
   - ''
   - ''
@@ -225,63 +225,6 @@ layers:
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {type: held}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  Raise3:
-  - ''
-  - ''
-  - ''
-  - ''
-  - ''
-  - ''
-  - ''
-  - ''
-  - ''
-  - ''
-  - ''
-  - ''
-  - {t: ▽, type: trans}
-  - ''
-  - ''
-  - ''
-  - ''
-  - ''
-  - ''
-  - ''
-  - ''
-  - ''
-  - ''
-  - ''
-  - {t: ▽, type: trans}
-  - '?'
-  - ''
-  - ''
-  - ''
-  - ''
-  - ''
-  - ''
-  - ''
-  - \
-  - ':'
-  - '`'
-  - {t: ▽, type: trans}
-  - ''
-  - ''
-  - ''
-  - ''
-  - ''
-  - ''
-  - ''
-  - ''
-  - ''
-  - ''
-  - _
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
