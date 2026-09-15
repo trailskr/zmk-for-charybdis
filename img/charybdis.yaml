@@ -1,7 +1,7 @@
 layout: {zmk_keyboard: charybdis}
 layers:
   Base:
-  - Ё
+  - ''
   - '1'
   - '2'
   - '3'
@@ -48,7 +48,7 @@ layers:
   - Б
   - Ю
   - Ъ
-  - ''
+  - Ё
   - Mouse
   - Lower
   - Macros
@@ -76,7 +76,7 @@ layers:
   - ↑
   - End
   - PgUp
-  - KP EQUAL
+  - KP MULTIPLY
   - KP 7
   - KP 8
   - KP 9
@@ -100,12 +100,12 @@ layers:
   - SCROLLLOCK
   - PAUSE BREAK
   - MENU
-  - KP DOT
+  - KP 0
   - KP 1
   - KP 2
   - KP 3
   - KP EQUAL
-  - KP 0
+  - KP DOT
   - {t: ▽, type: trans}
   - {type: held}
   - {t: ▽, type: trans}
@@ -152,16 +152,16 @@ layers:
   - ','
   - ''''
   - {t: ▽, type: trans}
-  - F
-  - '~'
   - <
+  - '['
+  - '{'
   - (
-  - ''
-  - ''
+  - '~'
+  - +
   - )
+  - '}'
+  - ']'
   - '>'
-  - ''
-  - ''
   - '-'
   - Raise3
   - Raise2
@@ -210,16 +210,16 @@ layers:
   - '"'
   - {t: ▽, type: trans}
   - ''
-  - —
   - ''
-  - '{'
-  - ''
-  - ''
-  - '}'
   - ''
   - ''
   - ''
   - '='
+  - ''
+  - ''
+  - ''
+  - ''
+  - —
   - {t: ▽, type: trans}
   - {type: held}
   - {t: ▽, type: trans}
@@ -269,10 +269,10 @@ layers:
   - ''
   - ''
   - ''
-  - '['
   - ''
   - ''
-  - ']'
+  - ''
+  - ''
   - ''
   - ''
   - ''
