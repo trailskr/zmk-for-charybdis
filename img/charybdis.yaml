@@ -76,10 +76,10 @@ layers:
   - ↑
   - End
   - PgUp
-  - KP MULTIPLY
-  - KP 7
-  - KP 8
-  - KP 9
+  - '*'
+  - '7'
+  - '8'
+  - '9'
   - '-'
   - _
   - {t: ▽, type: trans}
@@ -88,24 +88,24 @@ layers:
   - ↓
   - →
   - PgDn
-  - KP DIVIDE
-  - KP 4
-  - KP 5
-  - KP 6
+  - /
+  - '4'
+  - '5'
+  - '6'
   - +
-  - KP COMMA
+  - ','
   - {t: ▽, type: trans}
   - ''
   - PRINTSCREEN
   - SCROLLLOCK
   - PAUSE BREAK
   - MENU
-  - KP 0
-  - KP 1
-  - KP 2
-  - KP 3
+  - '0'
+  - '1'
+  - '2'
+  - '3'
   - '='
-  - KP DOT
+  - .
   - {t: ▽, type: trans}
   - {type: held}
   - {t: ▽, type: trans}
