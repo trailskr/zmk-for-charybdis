@@ -106,9 +106,9 @@
 //                    //                    //                    //                    //                    // ________||________ //                    //                    //                    //                    //                    //                    //
             bindings = <
 &kp ESCAPE            &kp C_BRIGHTNESS_DEC  &kp C_VOLUME_DOWN     &kp C_MUTE            &kp C_VOLUME_UP       &kp C_BRIGHTNESS_INC  &kp KP_NUMLOCK        &kp C_PREVIOUS        &kp C_PLAY            &kp C_NEXT            &kp C_AL_CALCULATOR   &none                 //
-&trans                &kp INSERT            &kp HOME              &kp UP                &kp END               &kp PAGE_UP           &kp KP_MULTIPLY       &kp KP_NUMBER_7       &kp KP_NUMBER_8       &kp KP_NUMBER_9       &kp KP_MINUS          &none                 //
-&trans                &none                 &kp LEFT              &kp DOWN              &kp RIGHT             &kp PAGE_DOWN         &kp KP_DIVIDE         &kp KP_NUMBER_4       &kp KP_NUMBER_5       &kp KP_NUMBER_6       &kp KP_PLUS           &kp KP_COMMA          //
-&trans                &none                 &kp PRINTSCREEN       &kp SCROLLLOCK        &kp PAUSE_BREAK       &kp C_MENU            &kp KP_NUMBER_0       &kp KP_NUMBER_1       &kp KP_NUMBER_2       &kp KP_NUMBER_3       &kp KP_EQUAL          &kp KP_DOT            //
+&none                 &kp INSERT            &kp HOME              &kp UP                &kp END               &kp PAGE_UP           &kp KP_MULTIPLY       &kp KP_NUMBER_7       &kp KP_NUMBER_8       &kp KP_NUMBER_9       &kp MINUS             &kp UNDER             //
+&trans                &none                 &kp LEFT              &kp DOWN              &kp RIGHT             &kp PAGE_DOWN         &kp KP_DIVIDE         &kp KP_NUMBER_4       &kp KP_NUMBER_5       &kp KP_NUMBER_6       &kp PLUS              &kp KP_COMMA          //
+&trans                &none                 &kp PRINTSCREEN       &kp SCROLLLOCK        &kp PAUSE_BREAK       &kp C_MENU            &kp KP_NUMBER_0       &kp KP_NUMBER_1       &kp KP_NUMBER_2       &kp KP_NUMBER_3       &kp EQUAL             &kp KP_DOT            //
                                                                   &trans                &trans                &trans                &trans                &trans                //
                                                                                         &trans                &trans                &trans                //
             >;         
@@ -120,9 +120,9 @@
 //                    //                    //                    //                    //                    // ________||________ //                    //                    //                    //                    //                    //                    //
             bindings = <
 &kp ESCAPE            &none                 &none                 &none                 &none                 &none                 &none                 &none                 &none                 &none                 &none                 &none                 //
-&kp F1                &kp F2                &kp F3                &kp F4                &kp F5                &kp F6                &kp F7                &kp F8                &kp F9                &kp F10               &kp F11               &kp F12               //
+&trans                &kp EXCL              &none                 &ruen_num             &ruen_ruble           &none                 &ruen_colon           &ruen_qmark           &ruen_tilde           &none                 &ruen_semi            &ruen_dqt             //
 &trans                &ruen_dot             &ruen_at              &ruen_hash            &ruen_dllr            &ruen_prcnt           &ruen_caret           &ruen_amps            &kp STAR              &ruen_pipe            &ruen_comma           &ruen_sqt             //
-&trans                &ruen_lt              &ruen_lbkt            &ruen_lbrc            &kp LPAR              &kp MINUS             &kp PLUS              &kp RPAR              &ruen_rbrc            &ruen_rbkt            &ruen_gt              &ruen_tilde           //
+&trans                &ruen_lt              &ruen_lbkt            &ruen_lbrc            &kp LPAR              &ruen_fslh            &kp BACKSLASH         &kp RPAR              &ruen_rbrc            &ruen_rbkt            &ruen_gt              &ruen_grave           //
                                                                   &trans                &trans                &trans                &trans                &trans                //
                                                                                         &trans                &trans                &trans                //
             >;
@@ -133,9 +133,9 @@
 //                    //                    //                    //                    //                    // ________||________ //                    //                    //                    //                    //                    //                    //
             bindings = <
 &none                 &none                 &none                 &none                 &none                 &none                 &none                 &none                 &none                 &none                 &none                 &none                 //
+&kp F1                &kp F2                &kp F3                &kp F4                &kp F5                &kp F6                &kp F7                &kp F8                &kp F9                &kp F10               &kp F11               &kp F12               //
 &trans                &none                 &none                 &none                 &none                 &none                 &none                 &none                 &none                 &none                 &none                 &none                 //
-&trans                &kp EXCL              &kp BACKSLASH         &ruen_num             &ruen_ruble           &none                 &ruen_colon           &ruen_qmark           &ruen_grave           &ruen_fslh            &ruen_semi            &ruen_dqt             //
-&trans                &none                 &none                 &none                 &none                 &kp UNDER             &kp EQUAL             &none                 &none                 &none                 &none                 &em_dash              //
+&trans                &none                 &none                 &none                 &none                 &none                 &none                 &none                 &none                 &none                 &none                 &em_dash              //
                                                                   &trans                &trans                &trans                &trans                &trans                //
                                                                                         &trans                &trans                &trans                //
             >;
@@ -146,7 +146,7 @@
 //                    //                    //                    //                    //                    // ________||________ //                    //                    //                    //                    //                    //                    //
             bindings = <
 &bootloader           &bt BT_SEL 0          &bt BT_SEL 1          &bt BT_SEL 2          &none                 &bt BT_CLR            &bt BT_CLR            &none                 &bt BT_SEL 2          &bt BT_SEL 1          &bt BT_SEL 0          &bootloader           //
-&trans                &mo 7                 &mkp RCLK             &mkp MCLK             &mkp LCLK             &none                 &none                 &none                 &none                 &none                 &none                 &none                 //
+&none                 &mo 7                 &mkp RCLK             &mkp MCLK             &mkp LCLK             &none                 &none                 &none                 &none                 &none                 &none                 &none                 //
 &trans                &mo 5                 &mkp RCLK             &mkp MCLK             &mkp LCLK             &none                 &none                 &none                 &none                 &none                 &none                 &none                 //
 &trans                &mo 6                 &mkp RCLK             &mkp MCLK             &mkp LCLK             &studio_unlock        &studio_unlock        &none                 &none                 &none                 &none                 &kp CAPSLOCK          //
                                                                   &trans                &trans                &trans                &trans                &trans                //
@@ -159,7 +159,7 @@
 //                    //                    //                    //                    //                    // ________||________ //                    //                    //                    //                    //                    //                    //
             bindings = <
 &none                 &none                 &none                 &none                 &none                 &none                 &none                 &none                 &none                 &none                 &none                 &none                 //
-&trans                &none                 &trans                &trans                &trans                &none                 &none                 &trans                &trans                &trans                &none                 &none                 //
+&none                 &none                 &trans                &trans                &trans                &none                 &none                 &trans                &trans                &trans                &none                 &none                 //
 &trans                &none                 &trans                &trans                &trans                &none                 &none                 &trans                &trans                &trans                &none                 &none                 //
 &trans                &none                 &trans                &trans                &trans                &none                 &none                 &trans                &trans                &trans                &none                 &none                 //
                                                                   &trans                &trans                &trans                &trans                &trans                //
@@ -172,7 +172,7 @@
 //                    //                    //                    //                    //                    // ________||________ //                    //                    //                    //                    //                    //                    //
             bindings = <
 &none                 &none                 &none                 &none                 &none                 &none                 &none                 &none                 &none                 &none                 &none                 &none                 //
-&trans                &none                 &trans                &trans                &trans                &none                 &none                 &trans                &trans                &trans                &none                 &none                 //
+&none                 &none                 &trans                &trans                &trans                &none                 &none                 &trans                &trans                &trans                &none                 &none                 //
 &trans                &none                 &trans                &trans                &trans                &none                 &none                 &trans                &trans                &trans                &none                 &none                 //
 &trans                &none                 &trans                &trans                &trans                &none                 &none                 &trans                &trans                &trans                &none                 &none                 //
                                                                   &trans                &trans                &trans                &trans                &trans                //
@@ -185,7 +185,7 @@
 //                    //                    //                    //                    //                    // ________||________ //                    //                    //                    //                    //                    //                    //
             bindings = <
 &none                 &none                 &none                 &none                 &none                 &none                 &none                 &none                 &none                 &none                 &none                 &none                 //
-&trans                &none                 &trans                &trans                &trans                &none                 &none                 &trans                &trans                &trans                &none                 &none                 //
+&none                 &none                 &trans                &trans                &trans                &none                 &none                 &trans                &trans                &trans                &none                 &none                 //
 &trans                &none                 &trans                &trans                &trans                &none                 &none                 &trans                &trans                &trans                &none                 &none                 //
 &trans                &none                 &trans                &trans                &trans                &none                 &none                 &trans                &trans                &trans                &none                 &none                 //
                                                                   &trans                &trans                &trans                &trans                &trans                //
@@ -197,8 +197,8 @@
         Macros {
 //                    //                    //                    //                    //                    // ________||________ //                    //                    //                    //                    //                    //                    //
             bindings = <
-&trans                &trans                &trans                &trans                &trans                &trans                &trans                &trans                &trans                &trans                &trans                &trans                //
-&trans                &trans                &trans                &lang_en              &lang_ru              &trans                &trans                &trans                &trans                &trans                &trans                &trans                //
+&none                 &trans                &trans                &trans                &trans                &trans                &trans                &trans                &trans                &trans                &trans                &trans                //
+&none                 &trans                &trans                &lang_en              &lang_ru              &trans                &trans                &trans                &trans                &trans                &trans                &trans                //
 &trans                &trans                &trans                &trans                &trans                &trans                &trans                &trans                &trans                &console_log_macro    &trans                &trans                //
 &trans                &trans                &trans                &trans                &trans                &trans                &trans                &trans                &trans                &trans                &trans                &trans                //
                                                                   &trans                &trans                &trans                &trans                &trans                //
