@@ -70,7 +70,7 @@ layers:
   - NEXT
   - AL CALCULATOR
   - ''
-  - {t: ▽, type: trans}
+  - ''
   - INSERT
   - Home
   - ↑
@@ -80,8 +80,8 @@ layers:
   - KP 7
   - KP 8
   - KP 9
-  - KP MINUS
-  - ''
+  - '-'
+  - _
   - {t: ▽, type: trans}
   - ''
   - ←
@@ -92,7 +92,7 @@ layers:
   - KP 4
   - KP 5
   - KP 6
-  - KP PLUS
+  - +
   - KP COMMA
   - {t: ▽, type: trans}
   - ''
@@ -104,7 +104,7 @@ layers:
   - KP 1
   - KP 2
   - KP 3
-  - KP EQUAL
+  - '='
   - KP DOT
   - {t: ▽, type: trans}
   - {type: held}
@@ -116,6 +116,63 @@ layers:
   - {t: ▽, type: trans}
   Raise:
   - ESC
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - {t: ▽, type: trans}
+  - '!'
+  - ''
+  - №
+  - ₽
+  - ''
+  - ':'
+  - '?'
+  - '~'
+  - ''
+  - ;
+  - '"'
+  - {t: ▽, type: trans}
+  - .
+  - '@'
+  - '#'
+  - $
+  - '%'
+  - ^
+  - '&'
+  - '*'
+  - '|'
+  - ','
+  - ''''
+  - {t: ▽, type: trans}
+  - <
+  - '['
+  - '{'
+  - (
+  - /
+  - \
+  - )
+  - '}'
+  - ']'
+  - '>'
+  - '`'
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {type: held}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  LowerRaise:
+  - ''
   - ''
   - ''
   - ''
@@ -140,39 +197,6 @@ layers:
   - F11
   - F12
   - {t: ▽, type: trans}
-  - .
-  - '@'
-  - '#'
-  - $
-  - '%'
-  - ^
-  - '&'
-  - '*'
-  - '|'
-  - ','
-  - ''''
-  - {t: ▽, type: trans}
-  - <
-  - '['
-  - '{'
-  - (
-  - '-'
-  - +
-  - )
-  - '}'
-  - ']'
-  - '>'
-  - '~'
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {type: held}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  LowerRaise:
-  - ''
   - ''
   - ''
   - ''
@@ -191,30 +215,6 @@ layers:
   - ''
   - ''
   - ''
-  - ''
-  - ''
-  - ''
-  - ''
-  - ''
-  - {t: ▽, type: trans}
-  - '!'
-  - \
-  - №
-  - ₽
-  - ''
-  - ':'
-  - '?'
-  - '`'
-  - /
-  - ;
-  - '"'
-  - {t: ▽, type: trans}
-  - ''
-  - ''
-  - ''
-  - ''
-  - _
-  - '='
   - ''
   - ''
   - ''
@@ -241,7 +241,7 @@ layers:
   - {t: BT, h: '1'}
   - {t: BT, h: '0'}
   - '&bootloader'
-  - {t: ▽, type: trans}
+  - ''
   - Arrows
   - '&mkp RCLK'
   - '&mkp MCLK'
@@ -298,7 +298,7 @@ layers:
   - ''
   - ''
   - ''
-  - {t: ▽, type: trans}
+  - ''
   - ''
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
@@ -355,7 +355,7 @@ layers:
   - ''
   - ''
   - ''
-  - {t: ▽, type: trans}
+  - ''
   - ''
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
@@ -412,7 +412,7 @@ layers:
   - ''
   - ''
   - ''
-  - {t: ▽, type: trans}
+  - ''
   - {type: held}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
@@ -457,6 +457,7 @@ layers:
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   Macros:
+  - ''
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
@@ -468,8 +469,7 @@ layers:
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
+  - ''
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - EN
