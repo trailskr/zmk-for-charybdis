@@ -96,7 +96,7 @@
 &kp TAB               &kp Q                 &kp W                 &kp E                 &kp R                 &kp T                 &kp Y                 &kp U                 &kp I                 &kp O                 &kp P                 &ruen_kha             //
 &kp LEFT_SHIFT        &kp A                 &kp S                 &kp D                 &kp F                 &kp G                 &kp H                 &kp J                 &kp K                 &kp L                 &ruen_zhe             &ruen_e               //
 &kp LCTRL             &kp Z                 &kp X                 &kp C                 &kp V                 &kp B                 &kp N                 &kp M                 &ruen_be              &ruen_yu              &ruen_hrd_sgn         &ruen_yo              //
-                                                                  &mo 4                 &mo 1                 &mo 8                 &mt LEFT_WIN DELETE   &lt 2 BACKSPACE       //
+                                                                  &mo 4                 &mo 1                 &mo 8                 &kp LEFT_WIN          &mo 2                 //
                                                                                         &kp LEFT_ALT          &kp SPACE             &kp ENTER             //
             >;
         };
@@ -147,7 +147,7 @@
             bindings = <
 &bootloader           &bt BT_SEL 0          &bt BT_SEL 1          &bt BT_SEL 2          &none                 &bt BT_CLR            &bt BT_CLR            &none                 &bt BT_SEL 2          &bt BT_SEL 1          &bt BT_SEL 0          &bootloader           //
 &none                 &mo 7                 &mkp RCLK             &mkp MCLK             &mkp LCLK             &none                 &none                 &none                 &none                 &none                 &none                 &none                 //
-&trans                &mo 5                 &mkp RCLK             &mkp MCLK             &mkp LCLK             &none                 &none                 &none                 &none                 &none                 &none                 &none                 //
+&trans                &mo 5                 &mkp RCLK             &mkp MCLK             &mkp LCLK             &none                 &none                 &kp BACKSPACE         &kp DELETE            &none                 &none                 &none                 //
 &trans                &mo 6                 &mkp RCLK             &mkp MCLK             &mkp LCLK             &studio_unlock        &studio_unlock        &none                 &none                 &none                 &none                 &kp CAPSLOCK          //
                                                                   &trans                &trans                &trans                &trans                &trans                //
                                                                                         &trans                &trans                &trans                //
