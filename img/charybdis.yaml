@@ -129,7 +129,7 @@ layers:
   - {t: BT, h: '1'}
   - {t: BT, h: '0'}
   - ''
-  - ''
+  - CAPSLOCK
   - F9
   - F10
   - F11
@@ -221,7 +221,7 @@ layers:
   - ''
   - ''
   - ''
-  - CAPSLOCK
+  - ''
   - {type: held}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
