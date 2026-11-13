@@ -146,9 +146,9 @@
 //                    //                    //                    //                    //                    // ________||________ //                    //                    //                    //                    //                    //                    //
             bindings = <
 &none                 &none                 &none                 &none                 &none                 &none                 &none                 &none                 &none                 &none                 &none                 &none                 //
-&none                 &mo 7                 &mkp RCLK             &mkp MCLK             &mkp LCLK             &none                 &none                 &none                 &none                 &none                 &none                 &none                 //
+&none                 &mo 7                 &none                 &none                 &none                 &none                 &none                 &none                 &none                 &none                 &none                 &none                 //
 &trans                &mo 5                 &mkp RCLK             &mkp MCLK             &mkp LCLK             &none                 &none                 &kp BACKSPACE         &kp DELETE            &none                 &none                 &none                 //
-&trans                &mo 6                 &mkp RCLK             &mkp MCLK             &mkp LCLK             &studio_unlock        &studio_unlock        &none                 &none                 &none                 &none                 &none                 //
+&trans                &mo 6                 &none                 &lang_en              &lang_ru              &studio_unlock        &studio_unlock        &none                 &none                 &none                 &none                 &none                 //
                                                                   &trans                &trans                &trans                &trans                &trans                //
                                                                                         &trans                &trans                &trans                //
             >;
@@ -197,12 +197,12 @@
         Macros {
 //                    //                    //                    //                    //                    // ________||________ //                    //                    //                    //                    //                    //                    //
             bindings = <
-&none                 &trans                &trans                &trans                &trans                &trans                &trans                &trans                &trans                &trans                &trans                &trans                //
-&none                 &trans                &trans                &lang_en              &lang_ru              &trans                &trans                &trans                &trans                &trans                &trans                &trans                //
-&trans                &trans                &trans                &trans                &trans                &trans                &trans                &trans                &trans                &console_log_macro    &trans                &trans                //
-&trans                &trans                &trans                &trans                &trans                &trans                &trans                &trans                &trans                &trans                &trans                &trans                //
-                                                                  &trans                &trans                &trans                &trans                &trans                //
-                                                                                        &trans                &trans                &trans                //
+&none                 &none                 &none                 &none                 &none                 &none                 &none                 &none                 &none                 &none                 &none                 &none                 //
+&none                 &none                 &none                 &none                 &none                 &none                 &none                 &none                 &none                 &none                 &none                 &none                 //
+&none                 &none                 &none                 &none                 &none                 &none                 &none                 &none                 &none                 &console_log_macro    &none                 &none                 //
+&none                 &none                 &none                 &none                 &none                 &none                 &none                 &none                 &none                 &none                 &none                 &none                 //
+                                                                  &none                 &none                 &trans                &none                 &none                 //
+                                                                                        &none                 &none                 &none                 //
             >;
         };
     };
